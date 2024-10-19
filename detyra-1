@@ -1,0 +1,19 @@
+//Mentor Fetahi
+//19.10.2024
+//Program qe do nxjer ne ekran "Miresevini Mbiemri Emri". Emri dhe Mbiemri jepen nga klienti.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string emri, mbiemri;
+    
+    cout<<"Jepni emrin tuaj: ";
+    cin >> emri;
+    cout<<"Jepni mbiemrin tuaj: ";
+    cin >> mbiemri;
+    
+    cout<<"Miresevini "<<mbiemri<<" "<<emri;
+    
+    return 0;
+}
