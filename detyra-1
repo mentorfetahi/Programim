@@ -1,19 +1,38 @@
 //Mentor Fetahi
 //19.10.2024
-//Program qe do nxjer ne ekran "Miresevini Mbiemri Emri". Emri dhe Mbiemri jepen nga klienti.
+//21.10.2024 Updated
+//Program qe do nxjerr ne ekran "Miresevini Mbiemri Emri". Emri dhe Mbiemri jepen nga klienti.
 
 #include <iostream>
 using namespace std;
 
 int main(){
     string emri, mbiemri;
+    int vitiLindjes;
+    double BMI, pesha, gjatesia, mosha;
     
     cout<<"Jepni emrin tuaj: ";
     cin >> emri;
     cout<<"Jepni mbiemrin tuaj: ";
     cin >> mbiemri;
     
-    cout<<"Miresevini "<<mbiemri<<" "<<emri;
+    cout<<"Miresevini "<<mbiemri<<" "<<emri<<endl;
+    
+    cout<<"Jepni vitin e lindjes: ";
+    cin >>vitiLindjes;
+    if(vitiLindjes > 2024){
+        cout<<"Vit i lindjes i gabuar!";
+        return 0;
+    }
+    
+    cout<<"Jepni gjatesine dhe peshen trupore: ";
+    cin >> gjatesia >> pesha;
+    gjatesia = gjatesia/100;
+    
+    mosha = 2024-vitiLindjes;
+    BMI = pesha/(gjatesia*gjatesia);
+    
+    cout<<"\n*\n*\n*\nMiresevini "<<mbiemri<<" "<<emri<<" ju jeni "<<mosha<<" vite, i gjate "<<gjatesia<<" cm, peshoni "<<pesha<<" kg dhe indexi BMI eshte: "<<BMI;
     
     return 0;
 }
